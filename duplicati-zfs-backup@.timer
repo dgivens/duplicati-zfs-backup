@@ -1,0 +1,11 @@
+[Unit]
+Description=Duplicati backup leveraging ZFS snapshots
+Requires=network-online.target zfs.target
+After=network-online.target zfs.target
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
